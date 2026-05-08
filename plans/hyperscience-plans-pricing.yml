@@ -13,29 +13,82 @@ tags:
 - Enterprise
 - Automation
 - Plans
-description: Placeholder plans/pricing artifact for Hyperscience. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+- Pricing
+description: >-
+  Hyperscience is enterprise-only — there are no public list prices. Pricing
+  is custom per contract, sized by document/page volume, modules deployed
+  (Hypercell core, Freight Pay, GenAI, SNAP), deployment model (cloud SaaS or
+  on-premises) and target accuracy SLA. FedRAMP High authorised for public-
+  sector engagements.
+notes: >-
+  Pricing artefact is intentionally directional only; numeric values are not
+  publicly disclosed. Reconciled flagged false until customer-specific
+  contract details are available.
 sources:
-- https://www.hyperscience.com/
+- https://www.hyperscience.ai/
+- https://www.hyperscience.ai/products/
+- https://www.hyperscience.ai/contact/
 plans:
-- id: hyperscience-default
-  name: To Be Reconciled
+- id: hyperscience-hypercell
+  name: Hypercell (Enterprise)
   type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+  description: Core Hypercell platform license; sized by document/page volume and modules.
   entries:
-  - label: API Access
-    name: api_access
+  - label: Custom contract
+    name: enterprise_contract
     type: flat
-    metric: varies
+    metric: contract
     limit: -1
-    timeFrame: usage
+    timeFrame: annual
     geo: global
     unit: 1
-    price: see https://www.hyperscience.com/
+    price: contact sales
     userMultiplied: false
-  elements:
-  - name: Pending Reconciliation
+- id: hyperscience-freight-pay
+  name: Hypercell for Freight Pay
+  type: enterprise
+  description: Freight Pay solution add-on.
+  entries:
+  - label: Custom contract
+    name: enterprise_contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+- id: hyperscience-genai
+  name: Hypercell for GenAI
+  type: enterprise
+  description: GenAI module add-on.
+  entries:
+  - label: Custom contract
+    name: enterprise_contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+- id: hyperscience-snap
+  name: Hypercell for SNAP
+  type: enterprise
+  description: Public-sector SNAP module (FedRAMP High).
+  entries:
+  - label: Custom contract
+    name: enterprise_contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

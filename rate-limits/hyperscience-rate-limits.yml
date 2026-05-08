@@ -15,21 +15,38 @@ tags:
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Hyperscience. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  Hyperscience runs as a per-tenant Hypercell deployment (cloud or on-prem),
+  so rate limits and processing throughput are determined by the deployment
+  sizing and contract SLA — there is no public managed-service rate-limit
+  schedule. The platform claims 99.5% accuracy and supports
+  high-throughput batch processing for enterprise customers.
+notes: >-
+  Numeric limits remain unreconciled until tenant deployment details are
+  visible. The standard contract permits sustained throughput up to the
+  provisioned compute capacity.
 sources:
-- https://www.hyperscience.com/
+- https://www.hyperscience.ai/
+- https://www.hyperscience.ai/products/api/
+- https://www.hyperscience.ai/security/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+- name: Per-tenant deployment
+  scope: tenant
+  metric: requests
+  limit: per provisioned compute capacity
+  notes: Sized to contract throughput SLA.
+- name: Document throughput SLA
+  scope: tenant
+  metric: documents/hour
+  limit: contract-defined
+  notes: Set by Hyperscience deployment plan.
 policies:
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: Honor Retry-After / 429 responses with exponential backoff.
+- name: Capacity Planning
+  description: Scale tenant compute via Hyperscience deployment options for higher sustained throughput.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

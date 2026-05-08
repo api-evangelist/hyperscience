@@ -3,7 +3,12 @@ url: https://raw.githubusercontent.com/api-evangelist/hyperscience/refs/heads/ma
 name: Hyperscience
 x-type: company
 description: >-
-  Hyperscience provides enterprise-grade intelligent document processing (IDP) with automated extraction, classification, and human-in-the-loop validation.
+  Hyperscience provides enterprise-grade intelligent document processing (IDP)
+  via the Hypercell platform. Capabilities include automated extraction,
+  classification, GenAI processing, human-in-the-loop validation, and
+  industry/use-case specific products (Hypercell for Freight Pay, GenAI,
+  SNAP). Hyperscience exposes a REST API and a Flows SDK to its customers.
+  FedRAMP High authorised; deployed in cloud and on-premises configurations.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -11,13 +16,38 @@ tags:
   - IDP
   - Enterprise
   - Automation
+  - GenAI
+  - FedRAMP
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: hyperscience:rest
+    name: Hyperscience REST API
+    description: >-
+      REST API for the Hypercell platform — submit documents, retrieve
+      extraction results, manage flows and human-review queues. Each tenant
+      receives its own base URL.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.hyperscience.ai/products/api/
+    baseURL: https://<tenant>.hyperscience.net
+    tags:
+      - REST
+      - Documents
+      - Flows
+      - Enterprise
+    properties:
+      - type: Documentation
+        url: https://www.hyperscience.ai/products/api/
+      - type: FlowsSDK
+        url: https://www.hyperscience.ai/
 common:
   - type: Website
-    url: https://www.hyperscience.com/
+    url: https://www.hyperscience.ai/
+  - type: Pricing
+    url: https://www.hyperscience.ai/contact/
+  - type: SecurityAndCompliance
+    url: https://www.hyperscience.ai/security/
   - type: Plans
     url: plans/hyperscience-plans-pricing.yml
   - type: RateLimits

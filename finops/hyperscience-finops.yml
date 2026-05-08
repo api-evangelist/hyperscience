@@ -5,7 +5,7 @@ provider: Hyperscience
 providerId: hyperscience
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Document AI
@@ -15,10 +15,20 @@ tags:
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Hyperscience. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps profile for Hyperscience. Hyperscience is enterprise-
+  only with custom annual contracts; cost surfaces are (a) the Hypercell
+  platform license, (b) optional industry-specific modules (Freight Pay,
+  GenAI, SNAP), and (c) for on-premises deployments, the customer's own
+  infrastructure spend.
+notes: >-
+  No public unit pricing. FedRAMP High authorisation makes Hyperscience an
+  unusually common pick for U.S. federal agencies; multi-year ELAs are
+  typical. Cost allocation by document type / business unit is best done at
+  the Flow / queue level inside Hypercell.
 sources:
-- https://www.hyperscience.com/
+- https://www.hyperscience.ai/
+- https://www.hyperscience.ai/security/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -27,40 +37,67 @@ alignedWith:
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 publisherName: Hyperscience
-serviceCategory: AI
+serviceCategory: Enterprise IDP
 billingModel:
-  pricingCategory: To Be Reconciled
-  billingFrequency: Monthly
+  pricingCategory: Enterprise Subscription
+  billingFrequency: Annual / Multi-year ELA
   billingCurrency: USD
   chargeCategories:
-  - Usage
   - Purchase
   - Adjustment
 focusColumns:
-  ServiceName: Hyperscience
-  ServiceCategory: AI
+  ServiceName: Hyperscience Hypercell
+  ServiceCategory: AI / IDP
   ProviderName: Hyperscience
   PublisherName: Hyperscience
   InvoiceIssuerName: Hyperscience
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
+  PricingUnit: contract-year
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: hypercell_license
+  description: Annual Hypercell platform license.
+  unit: contract-year
   aggregation: sum
   dimensions:
   - account
-  - resource
+- name: module_addon
+  description: Per-module add-on (Freight Pay, GenAI, SNAP).
+  unit: contract-year
+  aggregation: sum
+  dimensions:
+  - account
+  - module
+- name: documents_processed
+  description: Documents processed against contract throughput envelope.
+  unit: document
+  aggregation: sum
+  dimensions:
+  - tenant
+  - flow
+- name: pages_processed
+  description: Pages processed (informational).
+  unit: page
+  aggregation: sum
+  dimensions:
+  - tenant
+  - flow
+- name: on_prem_infra
+  description: Customer cloud / hardware spend for on-prem Hypercell deployments (cloud-billed).
+  unit: vm-hour
+  aggregation: sum
+  dimensions:
+  - cloud_account
+  - region
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Use Hypercell admin telemetry per Flow; reconcile with annual invoice.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: One Flow per business unit / document type; map to FOCUS ResourceTag.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Tune extraction thresholds to reduce review touches; consolidate Flows; renegotiate at renewal based on actual volume.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Assign Flow owners; review monthly throughput against contract envelope.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
