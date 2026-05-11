@@ -54,6 +54,22 @@ common:
     url: rate-limits/hyperscience-rate-limits.yml
   - type: FinOps
     url: finops/hyperscience-finops.yml
+  - type: Integrations
+    url: https://www.hyperscience.ai/partners/
+integrations:
+  - name: Hyperscience
+  - name: Google Cloud
+  - name: HPE
+  - name: IBM
+  - name: Palantir
+  - name: Microsoft
+  - name: Box
+  - name: AWS
+  - name: Deloitte
+  - name: Carahsoft
+  - name: Salesforce
+  - name: WNS
+  - name: Accenture
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
