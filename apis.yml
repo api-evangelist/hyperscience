@@ -1,7 +1,7 @@
 aid: hyperscience
 url: https://raw.githubusercontent.com/api-evangelist/hyperscience/refs/heads/main/apis.yml
 name: Hyperscience
-x-type: company
+kind: company
 description: >-
   Hyperscience provides enterprise-grade intelligent document processing (IDP)
   via the Hypercell platform. Capabilities include automated extraction,
