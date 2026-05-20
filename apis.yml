@@ -42,6 +42,10 @@ apis:
       - type: FlowsSDK
         url: https://www.hyperscience.ai/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/hyperscience
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/hyperscience
   - type: Website
     url: https://www.hyperscience.ai/
   - type: Pricing
