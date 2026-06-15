@@ -1,0 +1,339 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Hyperscience API",
+    "version": "5.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://{server}.{company}.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Retrieve application version",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/version"
+      },
+      "docs": "Retrieve application version"
+    },
+    {
+      "info": {
+        "name": "List submissions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/submissions",
+        "params": [
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List submissions"
+    },
+    {
+      "info": {
+        "name": "Create / submit documents",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{server}.{company}.com/api/v5/submissions",
+        "body": {
+          "type": "multipart-form",
+          "data": [
+            {
+              "name": "file",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "flow_id",
+              "type": "text",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Create / submit documents"
+    },
+    {
+      "info": {
+        "name": "Retrieve submission",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/submissions/:submission_id",
+        "params": [
+          {
+            "name": "submission_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve submission"
+    },
+    {
+      "info": {
+        "name": "Delete submission",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{server}.{company}.com/api/v5/submissions/:submission_id",
+        "params": [
+          {
+            "name": "submission_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete submission"
+    },
+    {
+      "info": {
+        "name": "List audit logs",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/audit_logs"
+      },
+      "docs": "List audit logs"
+    },
+    {
+      "info": {
+        "name": "Retrieve audit log",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/audit_logs/:audit_log_id",
+        "params": [
+          {
+            "name": "audit_log_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve audit log"
+    },
+    {
+      "info": {
+        "name": "Download audit logs as CSV",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/audit_logs/csv"
+      },
+      "docs": "Download audit logs as CSV"
+    },
+    {
+      "info": {
+        "name": "List layouts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/layouts"
+      },
+      "docs": "List layouts"
+    },
+    {
+      "info": {
+        "name": "Retrieve layout",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/layouts/:layout_id",
+        "params": [
+          {
+            "name": "layout_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve layout"
+    },
+    {
+      "info": {
+        "name": "List documents",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/documents"
+      },
+      "docs": "List documents"
+    },
+    {
+      "info": {
+        "name": "Retrieve document",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/documents/:document_id",
+        "params": [
+          {
+            "name": "document_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve document"
+    },
+    {
+      "info": {
+        "name": "List pages",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/pages"
+      },
+      "docs": "List pages"
+    },
+    {
+      "info": {
+        "name": "Retrieve page",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/pages/:page_id",
+        "params": [
+          {
+            "name": "page_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve page"
+    },
+    {
+      "info": {
+        "name": "List cases",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/cases"
+      },
+      "docs": "List cases"
+    },
+    {
+      "info": {
+        "name": "Retrieve case",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/cases/:case_id",
+        "params": [
+          {
+            "name": "case_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve case"
+    },
+    {
+      "info": {
+        "name": "Import / create flow",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{server}.{company}.com/api/v5/flows",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Import / create flow"
+    },
+    {
+      "info": {
+        "name": "Retrieve flow",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/flows/:flow_id",
+        "params": [
+          {
+            "name": "flow_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve flow"
+    },
+    {
+      "info": {
+        "name": "Create flow run",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{server}.{company}.com/api/v5/flow_runs",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create flow run"
+    },
+    {
+      "info": {
+        "name": "Retrieve flow run",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{server}.{company}.com/api/v5/flow_runs/:flow_run_id",
+        "params": [
+          {
+            "name": "flow_run_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve flow run"
+    }
+  ],
+  "bundled": true
+}
