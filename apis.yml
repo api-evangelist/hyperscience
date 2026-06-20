@@ -9,7 +9,7 @@ description: >-
   industry/use-case specific products (Hypercell for Freight Pay, GenAI,
   SNAP). Hyperscience exposes a REST API and a Flows SDK to its customers.
   FedRAMP High authorised; deployed in cloud and on-premises configurations.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Document AI
@@ -28,7 +28,7 @@ apis:
       REST API for the Hypercell platform — submit documents, retrieve
       extraction results, manage flows and human-review queues. Each tenant
       receives its own base URL.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.hyperscience.ai/products/api/
     baseURL: https://<tenant>.hyperscience.net
     tags:
