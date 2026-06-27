@@ -60,7 +60,7 @@ common:
     url: finops/hyperscience-finops.yml
   - type: Integrations
     url: https://www.hyperscience.ai/partners/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://hyperscience.ai/llms.txt
 integrations:
   - name: Hyperscience
