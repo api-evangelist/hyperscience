@@ -42,6 +42,8 @@ apis:
       - type: FlowsSDK
         url: https://www.hyperscience.ai/
 common:
+  - type: OAuthScopes
+    url: scopes/hyperscience-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/hyperscience
   - type: LinkedIn
@@ -62,6 +64,8 @@ common:
     url: https://www.hyperscience.ai/partners/
   - type: LlmsText
     url: https://hyperscience.ai/llms.txt
+  - url: https://www.hyperscience.ai/blog/
+    type: Blog
 integrations:
   - name: Hyperscience
   - name: Google Cloud

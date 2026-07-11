@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/hyperscience-openapi.yml
+docs: https://help.hyperscience.ai/deployment/docs/machine-to-machine-authentication-with-oauth-20
+note: Hyperscience's OAuth 2.0 M2M flow does not use published scopes; API access is
+  governed by permission groups (e.g., the API Access permission) rather than OAuth scopes
+  (https://help.hyperscience.ai/deployment/docs/machine-to-machine-authentication-with-oauth-20).
+schemes:
+- name: OAuth2
+  source: openapi/hyperscience-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+scopes: []
