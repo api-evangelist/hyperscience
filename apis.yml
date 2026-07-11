@@ -42,6 +42,14 @@ apis:
       - type: FlowsSDK
         url: https://www.hyperscience.ai/
 common:
+  - type: TrustCenter
+    url: security/hyperscience-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/hyperscience-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/hyperscience-domain-security.yml
+  - type: Authentication
+    url: authentication/hyperscience-authentication.yml
   - type: OAuthScopes
     url: scopes/hyperscience-scopes.yml
   - type: GitHubOrganization
