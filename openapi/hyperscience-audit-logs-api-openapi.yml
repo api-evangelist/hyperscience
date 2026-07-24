@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Hyperscience Audit Logs API
+  description: REST API for the Hyperscience document processing platform.
+  version: 5.0.0
+  contact:
+    name: Hyperscience Docs
+    url: https://docs.hyperscience.ai/
+servers:
+- url: https://{server}.{company}.com/api/v5
+  description: Hyperscience tenant deployment
+  variables:
+    server:
+      default: app
+    company:
+      default: example
+security:
+- OAuth2: []
+tags:
+- name: Audit Logs
+paths:
+  /audit_logs:
+    get:
+      summary: List audit logs
+      operationId: listAuditLogs
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Audit Logs
+  /audit_logs/{audit_log_id}:
+    parameters:
+    - in: path
+      name: audit_log_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve audit log
+      operationId: getAuditLog
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Audit Logs
+  /audit_logs/csv:
+    get:
+      summary: Download audit logs as CSV
+      operationId: downloadAuditLogsCsv
+      responses:
+        '200':
+          description: OK
+          content:
+            text/csv:
+              schema:
+                type: string
+      tags:
+      - Audit Logs
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+      flows:
+        clientCredentials:
+          tokenUrl: https://{server}.{company}.com/oauth/token
+          scopes: {}

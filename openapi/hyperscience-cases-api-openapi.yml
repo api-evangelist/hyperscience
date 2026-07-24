@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: Hyperscience Audit Logs Cases API
+  description: REST API for the Hyperscience document processing platform.
+  version: 5.0.0
+  contact:
+    name: Hyperscience Docs
+    url: https://docs.hyperscience.ai/
+servers:
+- url: https://{server}.{company}.com/api/v5
+  description: Hyperscience tenant deployment
+  variables:
+    server:
+      default: app
+    company:
+      default: example
+security:
+- OAuth2: []
+tags:
+- name: Cases
+paths:
+  /cases:
+    get:
+      summary: List cases
+      operationId: listCases
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Cases
+  /cases/{case_id}:
+    parameters:
+    - in: path
+      name: case_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve case
+      operationId: getCase
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Cases
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+      flows:
+        clientCredentials:
+          tokenUrl: https://{server}.{company}.com/oauth/token
+          scopes: {}

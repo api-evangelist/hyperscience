@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Hyperscience Audit Logs Flow Runs API
+  description: REST API for the Hyperscience document processing platform.
+  version: 5.0.0
+  contact:
+    name: Hyperscience Docs
+    url: https://docs.hyperscience.ai/
+servers:
+- url: https://{server}.{company}.com/api/v5
+  description: Hyperscience tenant deployment
+  variables:
+    server:
+      default: app
+    company:
+      default: example
+security:
+- OAuth2: []
+tags:
+- name: Flow Runs
+paths:
+  /flow_runs:
+    post:
+      summary: Create flow run
+      operationId: createFlowRun
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                flow_id:
+                  type: string
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Flow Runs
+  /flow_runs/{flow_run_id}:
+    parameters:
+    - in: path
+      name: flow_run_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve flow run
+      operationId: getFlowRun
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Flow Runs
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+      flows:
+        clientCredentials:
+          tokenUrl: https://{server}.{company}.com/oauth/token
+          scopes: {}

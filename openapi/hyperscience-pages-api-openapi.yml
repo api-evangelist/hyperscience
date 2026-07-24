@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: Hyperscience Audit Logs Pages API
+  description: REST API for the Hyperscience document processing platform.
+  version: 5.0.0
+  contact:
+    name: Hyperscience Docs
+    url: https://docs.hyperscience.ai/
+servers:
+- url: https://{server}.{company}.com/api/v5
+  description: Hyperscience tenant deployment
+  variables:
+    server:
+      default: app
+    company:
+      default: example
+security:
+- OAuth2: []
+tags:
+- name: Pages
+paths:
+  /pages:
+    get:
+      summary: List pages
+      operationId: listPages
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Pages
+  /pages/{page_id}:
+    parameters:
+    - in: path
+      name: page_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve page
+      operationId: getPage
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Pages
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+      flows:
+        clientCredentials:
+          tokenUrl: https://{server}.{company}.com/oauth/token
+          scopes: {}

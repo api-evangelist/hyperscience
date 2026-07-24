@@ -1,0 +1,91 @@
+openapi: 3.1.0
+info:
+  title: Hyperscience Audit Logs Submissions API
+  description: REST API for the Hyperscience document processing platform.
+  version: 5.0.0
+  contact:
+    name: Hyperscience Docs
+    url: https://docs.hyperscience.ai/
+servers:
+- url: https://{server}.{company}.com/api/v5
+  description: Hyperscience tenant deployment
+  variables:
+    server:
+      default: app
+    company:
+      default: example
+security:
+- OAuth2: []
+tags:
+- name: Submissions
+paths:
+  /submissions:
+    get:
+      summary: List submissions
+      operationId: listSubmissions
+      parameters:
+      - in: query
+        name: limit
+        schema:
+          type: integer
+      - in: query
+        name: offset
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Submissions
+    post:
+      summary: Create / submit documents
+      operationId: createSubmission
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                flow_id:
+                  type: string
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Submissions
+  /submissions/{submission_id}:
+    parameters:
+    - in: path
+      name: submission_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve submission
+      operationId: getSubmission
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Submissions
+    delete:
+      summary: Delete submission
+      operationId: deleteSubmission
+      responses:
+        '204':
+          description: Deleted
+      tags:
+      - Submissions
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+      flows:
+        clientCredentials:
+          tokenUrl: https://{server}.{company}.com/oauth/token
+          scopes: {}
