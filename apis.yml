@@ -9,7 +9,20 @@ description: >-
   industry/use-case specific products (Hypercell for Freight Pay, GenAI,
   SNAP). Hyperscience exposes a REST API and a Flows SDK to its customers.
   FedRAMP High authorised; deployed in cloud and on-premises configurations.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hyperscience.png
 tags:
   - AI
   - Document AI
@@ -22,25 +35,114 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - aid: hyperscience:rest
-    name: Hyperscience REST API
-    description: >-
-      REST API for the Hypercell platform — submit documents, retrieve
-      extraction results, manage flows and human-review queues. Each tenant
-      receives its own base URL.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.hyperscience.ai/products/api/
-    baseURL: https://<tenant>.hyperscience.net
-    tags:
-      - REST
-      - Documents
-      - Flows
-      - Enterprise
-    properties:
-      - type: Documentation
-        url: https://www.hyperscience.ai/products/api/
-      - type: FlowsSDK
-        url: https://www.hyperscience.ai/
+- aid: hyperscience:rest
+  name: Hyperscience REST API
+  description: >-
+    REST API for the Hypercell platform — submit documents, retrieve extraction results, manage flows
+    and human-review queues. Each tenant receives its own base URL.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - REST
+  - Documents
+  - Flows
+  - Enterprise
+  properties:
+  - type: Documentation
+    url: https://www.hyperscience.ai/products/api/
+  - type: FlowsSDK
+    url: https://www.hyperscience.ai/
+- aid: hyperscience:hyperscience-audit-logs-api
+  name: Hyperscience Audit Logs API
+  description: The Audit Logs API from Hyperscience — 3 operation(s) for audit logs.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Audit Logs
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-audit-logs-api-openapi.yml
+- aid: hyperscience:hyperscience-cases-api
+  name: Hyperscience Cases API
+  description: The Cases API from Hyperscience — 2 operation(s) for cases.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Cases
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-cases-api-openapi.yml
+- aid: hyperscience:hyperscience-documents-api
+  name: Hyperscience Documents API
+  description: The Documents API from Hyperscience — 2 operation(s) for documents.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-documents-api-openapi.yml
+- aid: hyperscience:hyperscience-flow-runs-api
+  name: Hyperscience Flow Runs API
+  description: The Flow Runs API from Hyperscience — 2 operation(s) for flow runs.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Flow Runs
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-flow-runs-api-openapi.yml
+- aid: hyperscience:hyperscience-flows-api
+  name: Hyperscience Flows API
+  description: The Flows API from Hyperscience — 2 operation(s) for flows.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Flows
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-flows-api-openapi.yml
+- aid: hyperscience:hyperscience-layouts-api
+  name: Hyperscience Layouts API
+  description: The Layouts API from Hyperscience — 2 operation(s) for layouts.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Layouts
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-layouts-api-openapi.yml
+- aid: hyperscience:hyperscience-pages-api
+  name: Hyperscience Pages API
+  description: The Pages API from Hyperscience — 2 operation(s) for pages.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Pages
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-pages-api-openapi.yml
+- aid: hyperscience:hyperscience-submissions-api
+  name: Hyperscience Submissions API
+  description: The Submissions API from Hyperscience — 2 operation(s) for submissions.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Submissions
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-submissions-api-openapi.yml
+- aid: hyperscience:hyperscience-version-api
+  name: Hyperscience Version API
+  description: The Version API from Hyperscience — 1 operation(s) for version.
+  humanURL: https://www.hyperscience.ai/products/api/
+  baseURL: https://<tenant>.hyperscience.net
+  tags:
+  - Version
+  properties:
+  - type: OpenAPI
+    url: openapi/hyperscience-version-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/hyperscience-agentic-access.yml
