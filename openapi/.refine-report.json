@@ -1,0 +1,30 @@
+{
+  "provider": "hyperscience",
+  "sources": [
+    "hyperscience-audit-logs-api-openapi.yml",
+    "hyperscience-cases-api-openapi.yml",
+    "hyperscience-documents-api-openapi.yml",
+    "hyperscience-flow-runs-api-openapi.yml",
+    "hyperscience-flows-api-openapi.yml",
+    "hyperscience-layouts-api-openapi.yml",
+    "hyperscience-pages-api-openapi.yml",
+    "hyperscience-submissions-api-openapi.yml",
+    "hyperscience-version-api-openapi.yml"
+  ],
+  "outputs": [
+    "hyperscience-audit-logs-api-openapi.yml",
+    "hyperscience-cases-api-openapi.yml",
+    "hyperscience-documents-api-openapi.yml",
+    "hyperscience-flow-runs-api-openapi.yml",
+    "hyperscience-flows-api-openapi.yml",
+    "hyperscience-layouts-api-openapi.yml",
+    "hyperscience-pages-api-openapi.yml",
+    "hyperscience-submissions-api-openapi.yml",
+    "hyperscience-version-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

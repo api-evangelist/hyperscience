@@ -1,0 +1,261 @@
+openapi: 3.1.0
+info:
+  title: Hyperscience API
+  description: REST API for the Hyperscience document processing platform.
+  version: "5.0.0"
+  contact:
+    name: Hyperscience Docs
+    url: https://docs.hyperscience.ai/
+servers:
+  - url: https://{server}.{company}.com/api/v5
+    description: Hyperscience tenant deployment
+    variables:
+      server:
+        default: app
+      company:
+        default: example
+paths:
+  /version:
+    get:
+      summary: Retrieve application version
+      operationId: getVersion
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+  /submissions:
+    get:
+      summary: List submissions
+      operationId: listSubmissions
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+        - in: query
+          name: offset
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create / submit documents
+      operationId: createSubmission
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                flow_id:
+                  type: string
+      responses:
+        '201':
+          description: Created
+  /submissions/{submission_id}:
+    parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve submission
+      operationId: getSubmission
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete submission
+      operationId: deleteSubmission
+      responses:
+        '204':
+          description: Deleted
+  /audit_logs:
+    get:
+      summary: List audit logs
+      operationId: listAuditLogs
+      responses:
+        '200':
+          description: OK
+  /audit_logs/{audit_log_id}:
+    parameters:
+      - in: path
+        name: audit_log_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve audit log
+      operationId: getAuditLog
+      responses:
+        '200':
+          description: OK
+  /audit_logs/csv:
+    get:
+      summary: Download audit logs as CSV
+      operationId: downloadAuditLogsCsv
+      responses:
+        '200':
+          description: OK
+          content:
+            text/csv:
+              schema:
+                type: string
+  /layouts:
+    get:
+      summary: List layouts
+      operationId: listLayouts
+      responses:
+        '200':
+          description: OK
+  /layouts/{layout_id}:
+    parameters:
+      - in: path
+        name: layout_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve layout
+      operationId: getLayout
+      responses:
+        '200':
+          description: OK
+  /documents:
+    get:
+      summary: List documents
+      operationId: listDocuments
+      responses:
+        '200':
+          description: OK
+  /documents/{document_id}:
+    parameters:
+      - in: path
+        name: document_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve document
+      operationId: getDocument
+      responses:
+        '200':
+          description: OK
+  /pages:
+    get:
+      summary: List pages
+      operationId: listPages
+      responses:
+        '200':
+          description: OK
+  /pages/{page_id}:
+    parameters:
+      - in: path
+        name: page_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve page
+      operationId: getPage
+      responses:
+        '200':
+          description: OK
+  /cases:
+    get:
+      summary: List cases
+      operationId: listCases
+      responses:
+        '200':
+          description: OK
+  /cases/{case_id}:
+    parameters:
+      - in: path
+        name: case_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve case
+      operationId: getCase
+      responses:
+        '200':
+          description: OK
+  /flows:
+    post:
+      summary: Import / create flow
+      operationId: createFlow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /flows/{flow_id}:
+    parameters:
+      - in: path
+        name: flow_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve flow
+      operationId: getFlow
+      responses:
+        '200':
+          description: OK
+  /flow_runs:
+    post:
+      summary: Create flow run
+      operationId: createFlowRun
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                flow_id:
+                  type: string
+      responses:
+        '201':
+          description: Created
+  /flow_runs/{flow_run_id}:
+    parameters:
+      - in: path
+        name: flow_run_id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve flow run
+      operationId: getFlowRun
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+      flows:
+        clientCredentials:
+          tokenUrl: https://{server}.{company}.com/oauth/token
+          scopes: {}
+security:
+  - OAuth2: []
