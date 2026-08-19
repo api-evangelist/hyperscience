@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Hyperscience Audit Logs Submissions API",
+    "version": "5.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://{server}.{company}.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Submissions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List submissions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}.{company}.com/api/v5/submissions",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List submissions"
+        },
+        {
+          "info": {
+            "name": "Create / submit documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{server}.{company}.com/api/v5/submissions",
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "flow_id",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Create / submit documents"
+        },
+        {
+          "info": {
+            "name": "Retrieve submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}.{company}.com/api/v5/submissions/:submission_id",
+            "params": [
+              {
+                "name": "submission_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve submission"
+        },
+        {
+          "info": {
+            "name": "Delete submission",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{server}.{company}.com/api/v5/submissions/:submission_id",
+            "params": [
+              {
+                "name": "submission_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete submission"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

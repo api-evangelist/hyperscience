@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Hyperscience Audit Logs Documents API",
+    "version": "5.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://{server}.{company}.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}.{company}.com/api/v5/documents"
+          },
+          "docs": "List documents"
+        },
+        {
+          "info": {
+            "name": "Retrieve document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}.{company}.com/api/v5/documents/:document_id",
+            "params": [
+              {
+                "name": "document_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve document"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

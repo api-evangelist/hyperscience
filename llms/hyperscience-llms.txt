@@ -1,0 +1,97 @@
+# Hyperscience
+
+> Hyperscience is the market leader in intelligent document processing and a provider of enterprise AI infrastructure software. The Hyperscience Hypercell platform unlocks the value of an organization's back office data through the automation of end-to-end processes, and transforms complex documents into LLM and RAG-ready data to power new enterprise GenAI experiences. This enables organizations to transform manual, siloed processes into a strategic advantage, resulting in a faster path to decisions, actions, and revenue; positive and engaging customer, public, and patient experiences; and dramatic increases in productivity.
+
+
+## Use Cases
+
+- Intelligent Document Processing & Data Extraction: Hyperscience automates the intelligent document processing of structured, semi-structured, and unstructured documents, accurately extracting text, handwriting, barcodes, and more-even from varied layouts and formats. Advanced pre- and post-processing with proprietary machine learning (ML) and vision-language models (VLM) ensures over 98% accuracy and high-quality, LLM-ready data.
+- Generative AI & LLM Applications: Hyperscience integrates Large Language Models (LLMs) and Generative AI (GenAI) into workflows to transform documents into RAG-ready (Retrieval-Augmented Generation) data for advanced search, chat, and analysis. It supports contextual understanding, summarization, translation, and content generation while validating and enhancing LLM outputs for reliable decision-making.
+- Process Automation & Workflow Orchestration: Hyperscience automates sorting, routing, and data entry with modular workflows that integrate classification, transcription, APIs, and custom logic. Human-in-the-loop (HITL) capabilities ensure up to 100% field-level completeness, while automated processes deliver up to 99.5% accuracy at scale.
+- Model Management & Continuous Improvement: Hyperscience offers a full ModelOps framework for training, deploying, monitoring, and improving AI models with minimal data (40-400 documents) and expertise required. Built-in AI co-pilots handle anomaly detection, data labeling, and drift management to ensure accuracy and adaptability over time.
+- Data Security & Compliance: Hyperscience safeguards sensitive data with encryption, redaction, robust role-based access control (RBAC), and detailed audit logs, meeting strict industry and government standards. Certifications include SOC 2 Type 2, Cyber Essentials Plus, GDPR/UK GDPR, CPRA, and FedRAMP High for U.S. public sector readiness.
+
+## Solutions
+
+- [Energy](https://www.hyperscience.ai/solutions/energy/): Transform energy workflows like permitting, compliance, and asset documentation into accurate and efficient processes with Hyperscience.
+- [Financial Services](https://www.hyperscience.ai/solutions/financial-services/): How do intelligent automation and document processing improve efficiency & accuracy in Financial Services? Find out about Financial Service Automation.
+- [Healthcare &#038; Life Sciences](https://www.hyperscience.ai/solutions/healthcare-life-sciences/): Find out how intelligent automation and document processing solutions help teams in healthcare and life sciences to improve efficiency and accuracy.
+- [Insurance](https://www.hyperscience.ai/solutions/insurance/): Find out how insurers can automate complex processes to accelerate claims processing, underwriting, and much more with Hyperscience.
+- [Legal](https://www.hyperscience.ai/solutions/legal/): Simplify workflows like contract review, case preparation, and compliance filings to improve efficiency and reduce errors with Hyperscience.
+- [Manufacturing](https://www.hyperscience.ai/solutions/manufacturing/): Automate workflows like production documentation and quality checks to reduce delays and improve operational efficiency with Hyperscience.
+- [Government / Public Sector](https://www.hyperscience.ai/solutions/public-sector/): Learn how US government and public sector agencies use intelligent document processing to improve efficiency & accuracy of document-heavy processes.
+- [Retail](https://www.hyperscience.ai/solutions/retail/): Automate vendor onboarding, inventory tracking, and compliance paperwork to improve accuracy and reduce costs with Hyperscience.
+- [Transportation &#038; Logistics](https://www.hyperscience.ai/solutions/transportation-logistics/): Learn how intelligent automation in the transportation & logistics sector improves operational agility & customer satisfaction, saving time and money.
+
+## Deployment Options
+
+- SaaS Offering (Software-as-a-Service): Hyperscience's SaaS runs on AWS with global data residency options, Azure marketplace, Google Cloud Platform Marketplace, and FedRAMP High authorization for secure, regulated use. The multi-tenant Kubernetes architecture supports private tenancy, autoscaling, and GPU-enabled model training for high-performance processing.
+- On-Premise: Hyperscience can be deployed in customer-managed data centers with full control over infrastructure, supporting Linux (Ubuntu, RHEL), Docker/Podman, and optional Kubernetes orchestration. It operates in connected or air-gapped environments, scales horizontally, and integrates with major databases, file stores, and external authentication systems.
+- Private Cloud: Similar to on-premise deployment, but run on a virtual private cloud controlled by the customer. Private cloud offers the benefit of hosting Vision Language Models (VLMs) and Large Language Models (LLMs) within the client's private environment for enhanced security and control.
+- Hybrid Cloud: Hyperscience is designed to be flexible and adaptable, supporting hybrid cloud models that combine aspects of on-premise and public/private cloud deployments to meet specific customer requirements.
+
+## Pages
+
+- [Home](https://www.hyperscience.ai/): Hyperscience helps you automate your document processes and turn unstructured content into structured actionable data. Find out more!
+- [Hypercell for Document Automation](https://www.hyperscience.ai/platform/hypercell/): Hyperscience Hypercell is a fully integrated AI platform that transforms back-office operations and enterprise decision-making.
+- [Hypercell for GenAI](https://www.hyperscience.ai/platform/hypercell-for-genai/): Teach AI the language of your business, and use enterprise data at the core of your AI initiatives with Hypercell for GenAI from Hyperscience.
+- [About Us](https://www.hyperscience.ai/about-us/): We're on a mission to connect human and artificial intelligence to solve tomorrow's automation challenges today. Learn more about our company here!
+- [Contact](https://www.hyperscience.ai/contact/): Get in touch with us by filling out our contact form. You can also find the addresses of our global offices here.
+
+## Blogs
+
+- [AI Explainability in IDP: What It Means and Why It Matters](https://www.hyperscience.ai/blog/ai-explainability-in-idp-what-it-means-and-why-it-matters/): Learn how AI explainability in IDP turns black-box automation into transparent, auditable workflows across regulated industries.
+- [When FOIA Backlogs Become a Threat to Transparency](https://www.hyperscience.ai/blog/when-foia-backlogs-become-a-threat-to-transparency/): Learn how public sector agencies use modern document automation to eliminate FOIA backlogs and protect transparency.
+- [Explainable AI in Highly Regulated Industries: Navigating the Red Tape with Transparent AI](https://www.hyperscience.ai/blog/explainable-ai-in-highly-regulated-industries-navigating-the-red-tape-with-transparent-ai/): Learn how explainable AI helps regulated enterprises in banking, healthcare, and insurance move past pilots and meet compliance requirements.
+- [America&#8217;s SNAP Problem Isn&#8217;t Fraud. It&#8217;s Paperwork.](https://www.hyperscience.ai/blog/americas-snap-problem-isnt-fraud-its-paperwork/): Paperwork drives 91% of SNAP payment errors, not fraud. Learn how modernizing document processing helps states reduce backlogs and errors.
+- [How to Build Transparent Document Automation That Humans Trust](https://www.hyperscience.ai/blog/how-to-build-transparent-document-automation-that-humans-trust/): Learn how transparent UI design, confidence scores, and feedback loops build trusted document automation that drives enterprise AI adoption.
+
+## Newsroom & Press
+
+- [Logistics Leader Hirschbach Shifts Document Automation Into High Gear With Hyperscience, Cutting &#8220;Days to Bill&#8221; by Over 60%](https://www.hyperscience.ai/newsroom/logistics-leader-hirschbach-shifts-document-automation-into-high-gear-with-hyperscience/): Read how logistics leader Hirschbach used Hyperscience to cut "days to bill" by over 60%, achieve 98% classification accuracy, and accelerate cash flow.
+- [Hyperscience Named &#8220;IDP Platform of the Year&#8221; in the 2026 AI Breakthrough Awards for the Second Consecutive Year](https://www.hyperscience.ai/newsroom/hyperscience-named-idp-platform-of-the-year-in-the-2026-ai-breakthrough-awards/): Hyperscience has been named "IDP Platform of the Year" in the 2026 AI Breakthrough Awards for the second consecutive year. Read the official announcement.
+- [Hyperscience Named a Leader and a Customer Favorite in Document Mining and Analytics Platforms Evaluation](https://www.hyperscience.ai/newsroom/hyperscience-named-a-leader-and-a-customer-favorite-in-document-mining-and-analytics-platforms-evaluation/): Hyperscience named a Leader and Customer Favorite in the Q2 2026 Forrester Wave for Document Mining and Analytics Platforms.
+- [From IDP to Intelligent Inference: Hyperscience Hypercell Spring 2026 Release Powers Next Generation of AI Agents](https://www.hyperscience.ai/newsroom/from-idp-to-intelligent-inference-spring-2026-release/): Read the Hyperscience Spring 2026 Release notes. Discover how inference layering optimization and ORCA VLM updates power the next generation of AI agents.
+- [Hyperscience Reels In Pure Fishing to Automate Invoice Processing and Drive Operational Efficiency](https://www.hyperscience.ai/newsroom/hyperscience-reels-in-pure-fishing-to-automate-invoice-processing-and-drive-operational-efficiency/): Global fishing supplier Pure Fishing selects Hyperscience for intelligent document processing (IDP) to automate complex invoices, improve data quality, and save time.
+
+## Resources
+
+- [Document Mining &amp; Analytics in the Age of Agentic AI: Market Trends, Use Cases &amp; Buyer Guidance](https://www.hyperscience.ai/resource/document-mining-analytics-in-the-age-of-agentic-ai/): Watch this on-demand webinar featuring guest speaker Boris Evelson from Forrester to learn key trends, use cases, and buyer guidance for document mining in 2026.
+- [How Hyperscience Turns Documents Into AI-Ready Data](https://www.hyperscience.ai/resource/how-hyperscience-turns-documents-into-ai-ready-data/): Watch our video to see how Hyperscience transforms document heavy workflows into AI-ready data pipelines to accelerate your back office automation.
+- [Spring '26 Release: From IDP to Intelligent Inference](https://www.hyperscience.ai/resource/spring-26-release-from-idp-to-intelligent-inference/): Watch our Spring 2026 Release webinar replay to learn how Hyperscience navigates the Inference Inflection Point with layered inference and ORCA VLM updates.
+- [From Dark Data to RAG: Preparing Unstructured Documents for LLMs](https://www.hyperscience.ai/resource/dark-data-to-rag/): Learn how to transform dark data and unstructured documents into high-fidelity structured data for Retrieval-Augmented Generation (RAG) and enterprise LLMs.
+- [What is Retrieval-Augmented Generation (RAG)?](https://www.hyperscience.ai/resource/rag/): What is Retrieval-Augmented Generation? Learn how RAG connects LLMs to your private data to eliminate hallucinations and improve enterprise AI accuracy.
+
+## Webinars & Events
+
+- [From Docs to Dollars: Unpacking the ROI of IDP &amp; Hyperscience](https://www.hyperscience.ai/webinars-events/from-docs-to-dollars-unpacking-the-roi-of-idp-hyperscience/): Join Hyperscience and guest speakers from IDC on Sept 17 to explore new IDC research on achieving a 615% ROI with IDP.
+- [MESC 2026](https://www.hyperscience.ai/webinars-events/mesc-2026/): Join Hyperscience at MESC 2026 in Portland (Booth #630) from August 17-20 to see how health and human services agencies use AI to modernize benefits operations.
+
+## Contact
+
+- [Contact Hyperscience](https://www.hyperscience.ai/contact/): Get in touch with us by filling out our contact form. You can also find the addresses of our global offices.
+
+## LLM Bot Information
+
+- llms.txt for www.hyperscience.ai
+- Hyperscience supports the responsible use of public web content by LLMs for indexing, search, and training.
+
+## Note: Hyperscience permits the use of public web content for:
+- LLM indexing and semantic search
+- LLM training and fine-tuning
+- Answer generation and summarization
+
+## Last modified date
+- Last-Modified: 2026-08-16
+
+## Bot Access Policy
+
+User-Agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /?s=
+Disallow: /*.pdf$
+Disallow: /*.docx$
+Disallow: /*.xlsx$
+
