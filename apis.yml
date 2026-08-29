@@ -9,6 +9,18 @@ description: >-
   industry/use-case specific products (Hypercell for Freight Pay, GenAI,
   SNAP). Hyperscience exposes a REST API and a Flows SDK to its customers.
   FedRAMP High authorised; deployed in cloud and on-premises configurations.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: enterprise
   onboarding: self-serve
