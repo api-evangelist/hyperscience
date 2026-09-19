@@ -41,7 +41,7 @@ tags:
   - IDP
   - Enterprise
   - Automation
-  - GenAI
+  - Generative AI
   - FedRAMP
 tags_raw:
   - AI
@@ -64,6 +64,11 @@ apis:
   humanURL: https://www.hyperscience.ai/products/api/
   baseURL: https://<tenant>.hyperscience.net
   tags:
+  - REST
+  - Documents
+  - Flow
+  - Enterprise
+  tags_raw:
   - REST
   - Documents
   - Flows
@@ -119,6 +124,8 @@ apis:
   humanURL: https://www.hyperscience.ai/products/api/
   baseURL: https://<tenant>.hyperscience.net
   tags:
+  - Flow
+  tags_raw:
   - Flows
   properties:
   - type: OpenAPI
