@@ -1,15 +1,7 @@
 {
   "provider": "hyperscience",
   "sources": [
-    "hyperscience-audit-logs-api-openapi.yml",
-    "hyperscience-cases-api-openapi.yml",
-    "hyperscience-documents-api-openapi.yml",
-    "hyperscience-flow-runs-api-openapi.yml",
-    "hyperscience-flows-api-openapi.yml",
-    "hyperscience-layouts-api-openapi.yml",
-    "hyperscience-pages-api-openapi.yml",
-    "hyperscience-submissions-api-openapi.yml",
-    "hyperscience-version-api-openapi.yml"
+    "_original/hyperscience-openapi.yml"
   ],
   "outputs": [
     "hyperscience-audit-logs-api-openapi.yml",
@@ -25,6 +17,49 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "hyperscience-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "hyperscience-openapi.yml: tagged paths GET /version -> Version",
+    "hyperscience-openapi.yml: tagged paths GET /submissions -> Submissions",
+    "hyperscience-openapi.yml: tagged paths POST /submissions -> Submissions",
+    "hyperscience-openapi.yml: tagged paths GET /submissions/{submission_id} -> Submissions",
+    "hyperscience-openapi.yml: tagged paths DELETE /submissions/{submission_id} -> Submissions",
+    "hyperscience-openapi.yml: tagged paths GET /audit_logs -> Audit Logs",
+    "hyperscience-openapi.yml: tagged paths GET /audit_logs/{audit_log_id} -> Audit Logs",
+    "hyperscience-openapi.yml: tagged paths GET /audit_logs/csv -> Audit Logs",
+    "hyperscience-openapi.yml: tagged paths GET /layouts -> Layouts",
+    "hyperscience-openapi.yml: tagged paths GET /layouts/{layout_id} -> Layouts",
+    "hyperscience-openapi.yml: tagged paths GET /documents -> Documents",
+    "hyperscience-openapi.yml: tagged paths GET /documents/{document_id} -> Documents",
+    "hyperscience-openapi.yml: tagged paths GET /pages -> Pages",
+    "hyperscience-openapi.yml: tagged paths GET /pages/{page_id} -> Pages",
+    "hyperscience-openapi.yml: tagged paths GET /cases -> Cases",
+    "hyperscience-openapi.yml: tagged paths GET /cases/{case_id} -> Cases",
+    "hyperscience-openapi.yml: tagged paths POST /flows -> Flows",
+    "hyperscience-openapi.yml: tagged paths GET /flows/{flow_id} -> Flows",
+    "hyperscience-openapi.yml: tagged paths POST /flow_runs -> Flow Runs",
+    "hyperscience-openapi.yml: tagged paths GET /flow_runs/{flow_run_id} -> Flow Runs",
+    "hyperscience-openapi.yml: declared missing tag: Audit Logs",
+    "hyperscience-openapi.yml: declared missing tag: Cases",
+    "hyperscience-openapi.yml: declared missing tag: Documents",
+    "hyperscience-openapi.yml: declared missing tag: Flow Runs",
+    "hyperscience-openapi.yml: declared missing tag: Flows",
+    "hyperscience-openapi.yml: declared missing tag: Layouts",
+    "hyperscience-openapi.yml: declared missing tag: Pages",
+    "hyperscience-openapi.yml: declared missing tag: Submissions",
+    "hyperscience-openapi.yml: declared missing tag: Version",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "hyperscience-audit-logs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-cases-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-flow-runs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-flows-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-layouts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-pages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-submissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hyperscience-version-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
