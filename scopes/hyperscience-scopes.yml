@@ -1,15 +1,65 @@
-generated: '2026-07-11'
-method: derived
-source: openapi/hyperscience-openapi.yml
-docs: https://help.hyperscience.ai/deployment/docs/machine-to-machine-authentication-with-oauth-20
-note: Hyperscience's OAuth 2.0 M2M flow does not use published scopes; API access is
-  governed by permission groups (e.g., the API Access permission) rather than OAuth scopes
-  (https://help.hyperscience.ai/deployment/docs/machine-to-machine-authentication-with-oauth-20).
+generated: '2026-10-14'
+method: none
+source: openapi/hyperscience-audit-logs-api-openapi.yml, openapi/hyperscience-cases-api-openapi.yml,
+  openapi/hyperscience-documents-api-openapi.yml, openapi/hyperscience-flow-runs-api-openapi.yml,
+  openapi/hyperscience-flows-api-openapi.yml, openapi/hyperscience-layouts-api-openapi.yml,
+  openapi/hyperscience-pages-api-openapi.yml, openapi/hyperscience-submissions-api-openapi.yml,
+  openapi/hyperscience-version-api-openapi.yml
 schemes:
 - name: OAuth2
-  source: openapi/hyperscience-openapi.yml
+  source: openapi/hyperscience-audit-logs-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-cases-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-documents-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-flow-runs-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-flows-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-layouts-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-pages-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-submissions-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://{server}.{company}.com/oauth/token
+  description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
+- name: OAuth2
+  source: openapi/hyperscience-version-api-openapi.yml
   flows:
   - flow: clientCredentials
     tokenUrl: https://{server}.{company}.com/oauth/token
   description: OAuth 2.0 M2M with JWT bearer tokens issued by the tenant's local identity provider.
 scopes: []
+note: The OAuth2 security scheme(s) in the OpenAPI declare no scopes, and no security requirement
+  references one.
