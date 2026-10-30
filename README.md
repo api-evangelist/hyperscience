@@ -1,4 +1,4 @@
-# Hyperscience (hyperscience)
+# Hyperscience
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,60 +66,141 @@
 
 Hyperscience provides enterprise-grade intelligent document processing (IDP) via the Hypercell platform. Capabilities include automated extraction, classification, GenAI processing, human-in-the-loop validation, and industry/use-case specific products (Hypercell for Freight Pay, GenAI, SNAP). Hyperscience exposes a REST API and a Flows SDK to its customers. FedRAMP High authorised; deployed in cloud and on-premises configurations.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/hyperscience/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/hyperscience/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Document AI · Intelligent Document Processing · Enterprise · Automation · Generative AI · FedRAMP
 
-## Tags
+## Hyperscience on APIs.io
 
-- AI
-- Document AI
-- IDP
-- Enterprise
-- Automation
-- GenAI
-- FedRAMP
+Everything profiled for Hyperscience is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hyperscience/](https://apis.io/providers/hyperscience/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (10)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Hyperscience REST API](https://apis.io/apis/hyperscience/rest/) — REST API for the Hypercell platform — submit documents, retrieve extraction results, manage flows and human-review queues. Each tenant receives its own base…
+- [Hyperscience Audit Logs API](https://apis.io/apis/hyperscience/hyperscience-audit-logs-api/) — The Audit Logs API from Hyperscience — 3 operation(s) for audit logs.
+- [Hyperscience Cases API](https://apis.io/apis/hyperscience/hyperscience-cases-api/) — The Cases API from Hyperscience — 2 operation(s) for cases.
+- [Hyperscience Documents API](https://apis.io/apis/hyperscience/hyperscience-documents-api/) — The Documents API from Hyperscience — 2 operation(s) for documents.
+- [Hyperscience Flow Runs API](https://apis.io/apis/hyperscience/hyperscience-flow-runs-api/) — The Flow Runs API from Hyperscience — 2 operation(s) for flow runs.
+- [Hyperscience Flows API](https://apis.io/apis/hyperscience/hyperscience-flows-api/) — The Flows API from Hyperscience — 2 operation(s) for flows.
+- [Hyperscience Layouts API](https://apis.io/apis/hyperscience/hyperscience-layouts-api/) — The Layouts API from Hyperscience — 2 operation(s) for layouts.
+- [Hyperscience Pages API](https://apis.io/apis/hyperscience/hyperscience-pages-api/) — The Pages API from Hyperscience — 2 operation(s) for pages.
+- [Hyperscience Submissions API](https://apis.io/apis/hyperscience/hyperscience-submissions-api/) — The Submissions API from Hyperscience — 2 operation(s) for submissions.
+- [Hyperscience Version API](https://apis.io/apis/hyperscience/hyperscience-version-api/) — The Version API from Hyperscience — 1 operation(s) for version.
 
-## APIs
+### Published properties
 
-### Hyperscience REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API for the Hypercell platform — submit documents, retrieve extraction results, manage flows and human-review queues. Each tenant receives its own base URL.
+#### Agentic access (1)
 
-- **Human URL:** [https://www.hyperscience.ai/products/api/](https://www.hyperscience.ai/products/api/)
-- **Base URL:** `https://<tenant>.hyperscience.net`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Hyperscience Agentic Access](https://apis.io/agentic-access/hyperscience/hyperscience-agentic-access/)
 
-- REST
-- Documents
-- Flows
-- Enterprise
+#### Collections (10)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://www.hyperscience.ai/products/api/)
-- [Flows S D K](https://www.hyperscience.ai/)
-- [Postman Collection](collections/hyperscience.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/hyperscience.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Hyperscience API](https://apis.io/collections/hyperscience/open-hyperscience/)
+- [Hyperscience Audit Logs API](https://apis.io/collections/hyperscience/open-hyperscience-audit-logs-api/)
+- [Hyperscience Audit Logs Cases API](https://apis.io/collections/hyperscience/open-hyperscience-cases-api/)
+- [Hyperscience Audit Logs Documents API](https://apis.io/collections/hyperscience/open-hyperscience-documents-api/)
+- [Hyperscience Audit Logs Flow Runs API](https://apis.io/collections/hyperscience/open-hyperscience-flow-runs-api/)
+- [Hyperscience Audit Logs Flows API](https://apis.io/collections/hyperscience/open-hyperscience-flows-api/)
+- [Hyperscience Audit Logs Layouts API](https://apis.io/collections/hyperscience/open-hyperscience-layouts-api/)
+- [Hyperscience Audit Logs Pages API](https://apis.io/collections/hyperscience/open-hyperscience-pages-api/)
+- [Hyperscience Audit Logs Submissions API](https://apis.io/collections/hyperscience/open-hyperscience-submissions-api/)
+- [Hyperscience Audit Logs Version API](https://apis.io/collections/hyperscience/open-hyperscience-version-api/)
 
-## Common Properties
+#### Security (4)
 
-- [GitHub Organization](https://github.com/hyperscience)
-- [LinkedIn](https://www.linkedin.com/company/hyperscience)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hyperscience Authentication](https://apis.io/security/hyperscience/hyperscience-authentication/)
+- [Hyperscience Domain Security](https://apis.io/security/hyperscience/hyperscience-domain-security/)
+- [Hyperscience Trust Center](https://apis.io/security/hyperscience/hyperscience-trust-center/)
+- [Hyperscience Vulnerability Disclosure](https://apis.io/security/hyperscience/hyperscience-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Hyperscience Scopes](https://apis.io/scopes/hyperscience/hyperscience-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Hyperscience Plans Pricing](https://apis.io/plans/hyperscience/hyperscience-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Hyperscience Rate Limits](https://apis.io/rate-limits/hyperscience/hyperscience-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Hyperscience Finops](https://apis.io/finops/hyperscience/hyperscience-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.hyperscience.ai/)
 - [Pricing](https://www.hyperscience.ai/contact/)
-- [Security And Compliance](https://www.hyperscience.ai/security/)
-- [Plans](plans/hyperscience-plans-pricing.yml)
-- [Rate Limits](rate-limits/hyperscience-rate-limits.yml)
-- [Fin Ops](finops/hyperscience-finops.yml)
-- [Integrations](https://www.hyperscience.ai/partners/)
-- [L L Ms Txt](https://hyperscience.ai/llms.txt)
+- [Blog](https://www.hyperscience.ai/blog/)
+- [GitHub](https://github.com/hyperscience)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 27.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 26.3 |
+
+**Agent readiness 20.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 30.0** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hyperscience/](https://apis.io/providers/hyperscience/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hyperscience: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hyperscience/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
